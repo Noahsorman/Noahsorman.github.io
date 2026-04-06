@@ -1,1 +1,149 @@
-<h1><a href="https://noahsorman.github.io/skrallgaming">Link to Skrallgaming</a></h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Hub</title>
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --card-bg: #16161a;
+            --card-hover: #1f1f24;
+            --text-main: #ffffff;
+            --text-dim: #a1a1aa;
+            --accent: #3bf65ac4;
+            --border: #27272a;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            letter-spacing: -0.025em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-dim);
+            font-size: 1rem;
+        }
+
+        /* Responsive Grid */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 cols on mobile */
+            gap: 1rem;
+            width: 100%;
+            max-width: 800px;
+        }
+
+        /* Desktop Adjustments */
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        .app-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 1.5rem;
+            padding: 2rem 1rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .app-card:hover {
+            background: var(--card-hover);
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+
+        .icon-wrapper {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .app-card span {
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+
+        svg {
+            width: 100%;
+            height: 100%;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        footer {
+            margin-top: auto;
+            padding-top: 4rem;
+            color: var(--text-dim);
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Launchpad</h1>
+        <!-- <p>My GitHub Projects</p> -->
+    </header>
+    <main class="grid"> 
+        <a href="./longevity/" class="app-card">
+            <div class="icon-wrapper">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.5 9.00002H16.5M16.5 9.00002L14.5 9.00002M16.5 9.00002L16.5 7M16.5 9.00002L16.5 11" stroke="#1C274C" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M8.96173 19.3786L9.43432 18.7963L8.96173 19.3786ZM12 5.57412L11.4522 6.08635C11.594 6.23803 11.7923 6.32412 12 6.32412C12.2077 6.32412 12.406 6.23803 12.5478 6.08635L12 5.57412ZM15.0383 19.3787L15.5109 19.961L15.0383 19.3787ZM12 21L12 20.25L12 21ZM2.65159 13.6821C2.86595 14.0366 3.32705 14.1501 3.68148 13.9358C4.03591 13.7214 4.14946 13.2603 3.9351 12.9059L2.65159 13.6821ZM6.53733 16.1707C6.24836 15.8739 5.77352 15.8676 5.47676 16.1566C5.18 16.4455 5.17369 16.9204 5.46267 17.2171L6.53733 16.1707ZM2.75 9.3175C2.75 6.41289 4.01766 4.61731 5.58602 4.00319C7.15092 3.39043 9.34039 3.82778 11.4522 6.08635L12.5478 5.06189C10.1598 2.50784 7.34924 1.70187 5.0391 2.60645C2.73242 3.50967 1.25 5.99209 1.25 9.3175H2.75ZM15.5109 19.961C17.0033 18.7499 18.7914 17.1268 20.2127 15.314C21.6196 13.5196 22.75 11.4354 22.75 9.31747H21.25C21.25 10.9289 20.3707 12.6814 19.0323 14.3884C17.7084 16.077 16.0156 17.6197 14.5657 18.7963L15.5109 19.961ZM22.75 9.31747C22.75 5.99208 21.2676 3.50966 18.9609 2.60645C16.6508 1.70187 13.8402 2.50784 11.4522 5.06189L12.5478 6.08635C14.6596 3.82778 16.8491 3.39042 18.414 4.00319C19.9823 4.6173 21.25 6.41287 21.25 9.31747H22.75ZM8.48914 19.961C9.76058 20.9928 10.6423 21.75 12 21.75L12 20.25C11.2771 20.25 10.8269 19.9263 9.43432 18.7963L8.48914 19.961ZM14.5657 18.7963C13.1731 19.9263 12.7229 20.25 12 20.25L12 21.75C13.3577 21.75 14.2394 20.9928 15.5109 19.961L14.5657 18.7963ZM3.9351 12.9059C3.18811 11.6708 2.75 10.455 2.75 9.3175H1.25C1.25 10.8297 1.82646 12.3179 2.65159 13.6821L3.9351 12.9059ZM9.43432 18.7963C8.51731 18.0521 7.49893 17.1582 6.53733 16.1707L5.46267 17.2171C6.47548 18.2572 7.53996 19.1908 8.48914 19.961L9.43432 18.7963Z" fill="#1C274C"/>
+                </svg>
+            </div>
+            <span>Longevity</span>
+        </a>       
+        <a href="./skrallgaming" class="app-card">
+            <div class="icon-wrapper">
+                <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 6C7 5.44772 7.44771 5 8 5C8.55228 5 9 5.44772 9 6V7H10C10.5523 7 11 7.44771 11 8C11 8.55228 10.5523 9 10 9H9V10C9 10.5523 8.55228 11 8 11C7.44771 11 7 10.5523 7 10V9H6C5.44771 9 5 8.55229 5 8C5 7.44771 5.44771 7 6 7H7V6Z" fill="#0F0F0F"/>
+                <path d="M17 6C17 6.55229 16.5523 7 16 7C15.4477 7 15 6.55229 15 6C15 5.44772 15.4477 5 16 5C16.5523 5 17 5.44772 17 6Z" fill="#0F0F0F"/>
+                <path d="M16 11C16.5523 11 17 10.5523 17 10C17 9.44771 16.5523 9 16 9C15.4477 9 15 9.44771 15 10C15 10.5523 15.4477 11 16 11Z" fill="#0F0F0F"/>
+                <path d="M19 8C19 8.55229 18.5523 9 18 9C17.4477 9 17 8.55229 17 8C17 7.44771 17.4477 7 18 7C18.5523 7 19 7.44771 19 8Z" fill="#0F0F0F"/>
+                <path d="M14 9C14.5523 9 15 8.55229 15 8C15 7.44771 14.5523 7 14 7C13.4477 7 13 7.44771 13 8C13 8.55229 13.4477 9 14 9Z" fill="#0F0F0F"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M2.17856 3.46413C2.7668 1.72817 4.47823 1 5.99997 1H18C19.5217 1 21.2331 1.72817 21.8214 3.46411C22.5987 5.75813 22.9381 9.03747 23.0762 12.1306C23.2157 15.2519 23.1537 18.2926 23.0858 20.165C23.0275 21.7748 21.6987 23 20.1211 23H18.5615C17.1849 23 15.985 22.0631 15.6511 20.7276L14.4086 15.7575C14.2973 15.3123 13.8973 15 13.4384 15H10.5615C10.1026 15 9.70266 15.3123 9.59137 15.7575L8.34884 20.7276C8.01496 22.0631 6.81501 23 5.43841 23H3.87886C2.30118 23 0.972467 21.7748 0.914126 20.165C0.846263 18.2926 0.784238 15.2519 0.923689 12.1306C1.06188 9.03748 1.40122 5.75815 2.17856 3.46413ZM5.99997 3C5.00364 3 4.29265 3.45709 4.07276 4.10599C3.39318 6.11152 3.05905 9.14533 2.9217 12.2198C2.7856 15.2661 2.84594 18.2475 2.91281 20.0926C2.93098 20.5937 3.34429 21 3.87886 21H5.43841C5.89728 21 6.29726 20.6877 6.40855 20.2425L7.65109 15.2724C7.98496 13.9369 9.18491 13 10.5615 13H13.4384C14.815 13 16.015 13.9369 16.3488 15.2724L17.5914 20.2425C17.7027 20.6877 18.1026 21 18.5615 21H20.1211C20.6556 21 21.0689 20.5937 21.0871 20.0926C21.154 18.2475 21.2143 15.2661 21.0782 12.2198C20.9409 9.14532 20.6068 6.11151 19.9272 4.10598C19.7073 3.45708 18.9963 3 18 3H5.99997Z" fill="#0F0F0F"/>
+                </svg>
+            </div>
+            <span>Skräll Gaming</span>
+        </a>        
+    </main>
+</body>
+</html>
